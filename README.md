@@ -2,7 +2,7 @@
 
 [![Docker Repository on Quay](https://quay.io/repository/ukhomeofficedigital/ckan-solr/status "Docker Repository on Quay")](https://quay.io/repository/ukhomeofficedigital/ckan-solr) [![Build Status](https://travis-ci.org/UKHomeOffice/docker-ckan-solr.svg)](https://travis-ci.org/UKHomeOffice/docker-ckan-solr) [![GitHub version](https://badge.fury.io/gh/UKHomeOffice%2Fdocker-ckan-solr.svg)](https://badge.fury.io/gh/UKHomeOffice%2Fdocker-ckan-solr) 
 
-This docker container contains everything you need to start CKAN.
+This docker container CKAN configuration of Solr.
 
 ## Running
 
