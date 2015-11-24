@@ -1,4 +1,4 @@
-FROM quay.io/ukhomeofficedigital/solr:v0.1.0
+FROM quay.io/ukhomeofficedigital/solr:v0.2.0
 
 USER root
 RUN yum install -y wget && \
