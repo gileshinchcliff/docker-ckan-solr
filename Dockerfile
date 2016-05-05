@@ -15,4 +15,11 @@ RUN bin/solr start & \
     rm /opt/solr/server/solr/ckan/conf/managed-schema && \
     wait $SOLR_PID
 
+RUN mkdir server/ssl
+
+RUN rm -rf bin/solr.in.sh
+ADD solr.in.sh bin/solr.in.sh
 ADD solrconfig.xml /opt/solr/server/solr/ckan/conf/solrconfig.xml
+ADD genjks.sh /opt/solr/genjks.sh
+
+CMD ["/opt/solr/genjks.sh && /opt/solr/entrypoint.sh"]
