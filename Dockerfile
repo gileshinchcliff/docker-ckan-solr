@@ -17,8 +17,7 @@ RUN bin/solr start & \
 
 RUN mkdir server/ssl
 
-RUN rm -rf bin/solr.in.sh
-ADD solr.in.sh bin/solr.in.sh
+ADD solr.in.sh bin/solr.in.sh.ssl
 ADD solrconfig.xml /opt/solr/server/solr/ckan/conf/solrconfig.xml
 ADD genjks.sh /opt/solr/genjks.sh
 
