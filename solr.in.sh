@@ -19,11 +19,11 @@
 #SOLR_JAVA_HOME=""
 
 # Increase Java Heap as needed to support your indexing / query needs
-SOLR_HEAP="512m"
+# SOLR_HEAP="512m"
 
 # Expert: If you want finer control over memory options, specify them directly
 # Comment out SOLR_HEAP if you are using this though, that takes precedence
-#SOLR_JAVA_MEM="-Xms512m -Xmx512m"
+SOLR_JAVA_MEM="-Xms512m -Xmx512m"
 
 # Enable verbose GC logging
 GC_LOG_OPTS="-verbose:gc -XX:+PrintHeapAtGC -XX:+PrintGCDetails \
@@ -55,7 +55,7 @@ GC_TUNE="-XX:NewRatio=3 \
 
 # By default the start script uses "localhost"; override the hostname here
 # for production SolrCloud environments to control the hostname exposed to cluster state
-#SOLR_HOST="192.168.1.1"
+SOLR_HOST="127.0.0.1"
 
 # By default the start script uses UTC; override the timezone if needed
 #SOLR_TIMEZONE="UTC"
@@ -97,12 +97,12 @@ ENABLE_REMOTE_JMX_OPTS="false"
 
 # Uncomment to set SSL-related system properties
 # Be sure to update the paths to the correct keystore for your environment
-SOLR_SSL_KEY_STORE=/opt/solr/server/ssl/solr-ssl.keystore.jks
+#SOLR_SSL_KEY_STORE=/opt/solr/server/ssl/solr-ssl.keystore.jks
 SOLR_SSL_KEY_STORE_PASSWORD=${SOLR_KEY_STORE_PASSWORD}
 SOLR_SSL_TRUST_STORE=/opt/solr/server/ssl/solr-ssl.keystore.jks
 SOLR_SSL_TRUST_STORE_PASSWORD=${SOLR_TRUST_PASSWORD}
-SOLR_SSL_NEED_CLIENT_AUTH=false
-SOLR_SSL_WANT_CLIENT_AUTH=false
+#SOLR_SSL_NEED_CLIENT_AUTH=false
+#SOLR_SSL_WANT_CLIENT_AUTH=false
 
 # Uncomment if you want to override previously defined SSL values for HTTP client
 # otherwise keep them commented and the above values will automatically be set for HTTP clients
